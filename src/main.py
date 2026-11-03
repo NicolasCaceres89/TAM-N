@@ -3,51 +3,8 @@
 # ==============================
 
 from scapy.all import *
+from net import *
 from datetime import datetime
-
-# ==============================
-# FUNCION ETHERNET
-# ==============================
-def analizar_ethernet(packet):
-    print("Hola estoy escaneando Ethernet")
-    return ""
-
-# ==============================
-# FUNCION IPv4
-# ==============================
-def analizar_ipv4(packet):
-    print("Hola estoy escaneando IPv4")
-    return ""
-
-# ==============================
-# FUNCION UDP
-# ==============================
-# def analizar_udp():
-
-# ==============================
-# FUNCION DNS
-# ==============================
-# def analizar_dns():
-
-# ==============================
-# FUNCION IPv6
-# ==============================
-# def analizar_ipv6():
-
-# ==============================
-# FUNCION ARP
-# ==============================
-# def analizar_arp():
-
-# ==============================
-# FUNCION ICMP
-# ==============================
-# def analizar_icmp():
-
-# ==============================
-# FUNCION TCP
-# ==============================
-# def analizar_tcp():
 
 # ==============================
 # FUNCIÓN PRINCIPAL
@@ -87,7 +44,6 @@ def analizar_paquete(packet):
     log_texto += "-" * 50 + "\n"
 
     guardar_log(log_texto)
-
 
 def main():
     print("=== SNIFFER INICIADO ===")
