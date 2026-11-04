@@ -2,7 +2,7 @@ from scapy.all import ARP
 
 def analizar_arp(packet):
     arp = packet[ARP]
-    output = "================ ARP ===============\n"
+    output = "=============== ARP ================\n"
     output += f"Hardware Type    : {arp.hwtype}\n"
     output += f"Protocol Type    : {arp.ptype}\n"
     output += f"Operation        : {arp.op}\n"
