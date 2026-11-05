@@ -5,5 +5,5 @@ def analizar_dns(packet):
     output = "=============== DNS ================\n"
     if dns.qd: 
         url = dns.qd.qname.decode(errors="replace").rstrip(".")
-        output += f"Query    : {url}\n"
+        output += f"Query    : {url}\n\n"
     return output

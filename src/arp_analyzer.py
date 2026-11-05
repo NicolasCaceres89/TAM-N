@@ -9,5 +9,5 @@ def analizar_arp(packet):
     output += f"MAC Origin       : {arp.hwsrc}\n"
     output += f"IP Origin        : {arp.psrc}\n"
     output += f"MAC Destination  : {arp.hwdst}\n"
-    output += f"IP Destination   : {arp.pdst}\n"
+    output += f"IP Destination   : {arp.pdst}\n\n"
     return output
