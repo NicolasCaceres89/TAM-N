@@ -17,13 +17,17 @@ el trafico que fuye através de nuestro dispositivo.
 ### Documentación
 #### Índice
 - [Estructura](#estructura-proyecto-tam-n)
-- [Uso Scapy Modulos](#uso-de-scapy-en-cada-modulo)
+- [Uso Scapy Modulos](#uso-de-scapy-en-cada-módulo)
+- [Maquetación](#maquetación)
+- [Instalación](#instalación-tam-n)
+- [Ejecución](#ejecución)
 
 #### Estructura Proyecto TAM-N
 ```
 .
 ├── docs
 │   └── README.md
+├── install.sh
 └── src
     ├── arp_analyzer.py
     ├── dns_analyzer.py
@@ -39,7 +43,7 @@ el trafico que fuye através de nuestro dispositivo.
 
 ```
 
-#### Uso de Scapy en Cada Modulo
+#### Uso de Scapy en Cada Módulo
 ```
 -----------------------------------------------------------------------------------
 | Módulo               |   Capa Scapy   |              Campos usados              |
@@ -77,4 +81,58 @@ o paginas de terceros, incluyendo el uso IA, para comprender ciertas caracterist
 muy claras en la documentacion oficial.
 
 #### Maquetación
+- Vista inicial.
+```
+=== SNIFFER INICIADO ===
+Los logs se guardan en: /mnt/HomeOne/Projects/TAM-N/log.txt
+Presione Ctrl+C para detener
+
+Ingrese filtro (tcp, udp, icmp, arp, dns, ipv4, ipv6 o vacío): 
+
+```
+
+- Capturando paquetes.
+```
+=== SNIFFER INICIADO ===
+Los logs se guardan en: /mnt/HomeOne/Projects/TAM-N/log.txt
+Presione Ctrl+C para detener
+
+Ingrese filtro (tcp, udp, icmp, arp, dns, ipv4, ipv6 o vacío): tcp
+
+Capturando paquetes... [n]    #n es el numero de paquetes capturados
+```
+
+- Datos del Paquete en log.txt.
+```
+=============== [Type Package] ===============
+[data-type]        : [value]
+...
+```
+
+#### Instalación TAM-N
+
+##### Requisitos
+- Python 3.8 o superior
+- Permisos de administrador (capturar tráfico requiere root)
+
+##### Pasos
+```bash
+$ git clone https://github.com/NicolasCaceres89/TAM-N.git
+$ cd TAM-N
+$ chmod +x install.sh
+$ ./install.sh
+```
+Se creo un Script de Bash para generar un ejecutable con todos los permisos necesarios para el 
+funcionamiento de TAM-N. 
+
+*Nota:* Se notifica que el uso de sudo es unicamente para brindar los permisos
+para poder capturar el trafico de red, sin que tengan la necesidad de ejecutar el ejecutable con
+sudo.
+
+##### Ejecución
+Para utilizar TAM-N Sniffer, solo tendra que ejecutar:
+
+```bash
+$ ./tamn
+```
 
