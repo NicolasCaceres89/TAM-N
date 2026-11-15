@@ -1,5 +1,6 @@
-tam-nenv/
-netfunctions.py
+dist/
+build/
+tam-n/
 __pycache__/
-*.txt
-
+*.spec
+tamn
