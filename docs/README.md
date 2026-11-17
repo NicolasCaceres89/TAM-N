@@ -109,6 +109,8 @@ Capturando paquetes... [n]    #n es el numero de paquetes capturados
 ...
 ```
 
+Los Paquetes capturados se guardan en ```~/.local/state/tamn/log.txt```
+
 #### Instalación TAM-N
 
 ##### Requisitos
